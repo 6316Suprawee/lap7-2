@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cal() {
+            var number1 = document.getElementById("number1").value;
+            var number2 = document.getElementById("number2").value;
+            var select= document.getElementById("select");
+            if(select.value == "+"){
+                var s=number1+number2;
+                document.getElementById("answer").value=""+s;
+            }else if(select.value == "-"){
+                var a=number1-number2;
+                document.getElementById("answer").value=""+a;
+            }else if(select.value == "*"){
+                var b=number1 * number2;
+                document.getElementById("answer").value=""+b;
+            }else if(select.value == "/"){
+                var d=number1/number2;
+                document.getElementById("answer").value=""+d;
+        }
+    }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text"  id="number1"> 
+        <select id="select">
+            <option value="+" >+</option>
+            <option value="-" selected="selected">-</option>
+            <option value="*">X</option>
+            <option value="/">%</option>
+            </select> 
+        <input type="text"  id="number2"> = 
+        <input type="text" name="value" id="answer">
+            <input type="button" value="Compute" onclick="cal()">
+        <p id="answer"></p>
+        </form>
+</body>
+</html>
